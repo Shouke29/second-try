@@ -1,17 +1,14 @@
 /* General Styles */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #FEF1E6;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  width: 100%; 
+header {
   margin: 0;
-  padding: 100px 0 20px 0; 
+  padding: 0;
 }
 
 /* Navigation Bar */
@@ -23,9 +20,7 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  left: 0; 
-  right: 0; 
-  width: 100%; 
+  width: 95%;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -36,7 +31,8 @@ body {
   margin: 0;
   font-size: 2.5em;
   color: #FEF1E6;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive; /* Elegant, cute logo font */
+  font-weight: normal;
 }
 
 .topnav {
@@ -44,187 +40,77 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 30px;
+  gap: 30px; /* Adds spacing between navigation items */
+}
+
+.topnav li {
+  margin: 0;
 }
 
 .topnav a {
   text-decoration: none;
   color: #FEF1E6;
   font-weight: 600;
-  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font for navigation links */
+  text-transform: uppercase; /* Makes the links more visible and bold */
   padding: 10px 15px;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+.topnav a.active,
 .topnav a:hover {
   color: #F9D5A7;
-  background-color: #FFB085;
+  background-color: #FFB085; /* Adds a soft highlight effect */
   border-radius: 5px;
 }
 
-/* Title Styling for Our Menu */
-.menu-title {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.menu-title h1 {
-  display: inline-block;
-  font-size: 2.5em;
-  color: #f0caae;
-  position: relative;
-  padding: 0 20px; 
-}
-
-.menu-title h1::before,
-.menu-title h1::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 40%;
-  height: 1px;
-  background-color: #f0caae;
-  transform: translateY(-50%);
-}
-
-.menu-title h1::before {
-  left: -50%;  
-}
-
-.menu-title h1::after {
-  right: -50%;  
-}
-
-/* Menu Navigation */
-.menu-nav {
-  background-color: #90AACB;
-  padding: 10px 0;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  width: 100%; /* Full width */
-  margin: 0 auto; /* Center the nav */
-}
-
-.menu-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.menu-nav ul li {
-  margin-right: 20px;
-}
-
-.menu-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
-}
-
-.menu-nav ul li a:hover {
-  background-color: #FFB085;
-  color: #90AACB;
+/* Right Alignment for Last Item */
+.topnav .right {
+  margin-left: auto;
 }
 
 /* Main Content Section */
-/* Menu Sections */
-section {
-  margin-bottom: 80px;
-  width: 100%; /* Ensure the section width is full */
-  margin: 0 auto; /* Center content */
-}
-
-h2 {
+.content {
+  padding: 20px;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 2em;
-  color: #333;
+  background-color: #FFF;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Menu Items - Flexbox Layout for Item Arrangement */
-.menu-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 3px;
-  margin-top: 20px;
+/* Responsive Design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .topnav li {
+    margin: 5px 0;
+  }
 }
 
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px; 
-  text-align: center;
-}
 
-.menu-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
 
-.menu-item h3 {
-  margin: 10px 0;
-  font-size: 1.5em;
-  color: #333;
-}
 
-.menu-item p {
-  font-size: 1em;
-  color: #555;
-  margin-bottom: 10px;
-}
 
-.menu-item button {
-  padding: 10px 15px;
-  background-color: #90AACB;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
 
-.menu-item a:link, a:visited{
-  color: white;
-  text-decoration: none;
-}
 
-.menu-item button:hover {
-  background-color: #555;
-}
 
-#cart-count {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff6347;
-}
 
-/* Footer Section Styling */
-.footer {
-  background-color: #90AACB;
-  color: #fff;
-  padding: 40px 30px;
-  display: flex;
-  justify-content: center;
-}
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
-}
+
+
+
+
+
+
+
+
 
 /* Footer Section */
 .footer {
@@ -233,7 +119,6 @@ h2 {
   padding: 40px 30px;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
 }
 
 .footer-content {
